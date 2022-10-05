@@ -1,0 +1,12 @@
+{
+  "name": "fantastik",
+  "version": "1.0.0",
+  "description": "fantastik is a database / local storage client for NodeJS that is blazingly fast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cosmoswastaken",
+  "license": "ISC",
+  "keywords": ["database", "quick.db", "json", "localstorage", "fantastic", "fantastik-db"]
+}
