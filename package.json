@@ -1,6 +1,6 @@
 {
   "name": "fantastik",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "fantastik is a database / local storage client for NodeJS that is blazingly fast",
   "main": "index.js",
   "scripts": {
