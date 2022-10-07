@@ -4,12 +4,17 @@ class fanbase {
   constructor(file) {
     this.file = file || 'data.fan'
     if(this.file === 'data.fan') {
-      try { load(this.file); } catch { writexx(this.file, {}); }
+      try { load(this.file); } catch { 
+        writexx(`corrupted/${this.file}`, {}); 
+        writexx(this.file, {});
+      }
     } else {
 	  if (!this.file.includes('./')) this.file = './' + this.file
       if(extension(this.file) !== 'fan') throw Error("[file extention wrong] your files must end with the .fan suffix")
-      try { load(this.file); } catch { writexx(this.file, {}); }
-    }
+      try { load(this.file); } catch { 
+        writexx(`corrupted/${this.file}`, {}); 
+        writexx(this.file, {});
+      }    }
   }
 
 json
