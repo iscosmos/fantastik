@@ -3,19 +3,37 @@ const _0x1d8a2f=_0x3639;(function(_0x343f53,_0x109ced){const _0x1543bd=_0x3639,_
 class fanbase {
   constructor(file) {
     this.file = file || 'data.fan'
-    if(this.file === 'data.fan') {
+    if(this.file === 'data.fun') {
       try { load(this.file); } catch { 
-        writexx(`corrupted/${this.file}`, {}); 
-        writexx(this.file, {});
-      }
+        try {
+          var   fileContents = fs.readFileSync(this.file)
+        } catch {
+          writexx(this.file, {}) }
+
+        }
+
+        if (fs.readFileSync(this.file, 'utf-8').length >= 1) {
+         return console.log("corrupt database file at" + this.file)
+        }
+    
+
+
     } else {
 	  if (!this.file.includes('./')) this.file = './' + this.file
       if(extension(this.file) !== 'fan') throw Error("[file extention wrong] your files must end with the .fan suffix")
-      try { load(this.file); } catch { 
-        writexx(`corrupted/${this.file}`, {}); 
-        writexx(this.file, {});
-      }    }
-  }
+ try { load(this.file); } catch { 
+        try {
+          var   fileContents = fs.readFileSync(this.file)
+        } catch {
+          writexx(this.file, {}) }
+
+        }
+        
+        if (fs.readFileSync(this.file, 'utf-8').length >= 1) {
+         return console.log("corrupt database file at" + this.file)
+        }
+ }}
+  
 
 json
 
