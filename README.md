@@ -67,8 +67,8 @@ the .fan structure is very similar to .json with main differences being;
 
 overall a .fan file will look as follows;
 ```
-"cash" = 100;
-"myArray" = {
+"cash": 100,
+"myArray": {
     1, 2, 3, 4, 5
 }
 ```
